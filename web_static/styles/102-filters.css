@@ -1,0 +1,152 @@
+section.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    height: 70px;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+}
+
+section.filters #button {
+    font-size: 18px;
+    background-color: #FF5A5F;
+    color: #FFFFFF;
+    height: 48px;
+    width: 20%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    margin-right: 30px;
+    margin-left: auto;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+section.filters .locations,
+section.filters .amenities {
+    height: 100%;
+    width: 25%;
+    margin-left: 50px;
+    cursor: pointer;
+    position: relative;
+}
+
+section.filters .locations {
+    border-right: 1px solid #DDDDDD;
+}
+
+
+
+.locations h3,
+.amenities h3 {
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.locations h4,
+.amenities h4 {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 0px;
+}
+
+
+.locations .popover,
+.amenities .popover {
+    display: none;
+    background-color: #FAFAFA;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    list-style-type: none;
+    padding-top: 20px;
+    z-index: 10;
+    position: absolute;
+    top: 56px;
+    width: 100%;
+    padding-left: 49px;
+    left: -50px;
+    
+}
+
+.locations .popover li h2,
+.amenities .popover li h2 {
+    margin-bottom: 0px;
+
+}
+
+.locations .popover .content,
+.amenities .popover .content {
+    margin-left: 20px;
+    line-height: 20px;
+    padding: 2px;
+}
+
+.filters h2 {
+    margin: 0px;
+    font-size: 16px;
+    margin-left: -13px;
+}
+
+.filters .locations li:nth-child(4),
+.filters .amenities li:nth-child(4) {
+    margin-top: 10px;
+}
+
+.filters li {
+    cursor: pointer;
+    padding-left: 13px;
+}
+
+.filters .locations:hover .popover,
+.filters .amenities:hover .popover {
+    display: block;
+}
+
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .filters h3 {
+        margin-top: 18px;
+    }
+
+    .filters h4 {
+        margin-bottom: 0px;
+    }
+
+    .filters .amenities,
+    .filters .locations {
+        width: 30%;
+        margin-left: 30px;
+    }
+
+    .filters .amenities .popover {
+        left: -31px;
+
+    }
+}
+
+@media all and (max-width: 480px) {
+    .filters h3 {
+        margin-top: 12px;
+    }
+
+    .filters h4 {
+        font-size: 13px;
+        margin-bottom: 0px;
+    }
+
+    .filters .amenities,
+    .filters .locations {
+        margin-left: 30px;
+    }
+
+    .filters .amenities .popover {
+        left: -31px;
+
+    }
+
+}
